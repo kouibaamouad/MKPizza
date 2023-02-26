@@ -1,0 +1,830 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+* {
+    font-family: 'Inter', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+:root {
+    --Primary-Color: #ECC451;
+    --Secondary-Color: #ECC45199;
+}
+
+.material-symbols-outlined {
+    padding: 0px;
+    font-size: 30px;
+    font-variation-settings: 'FILL' 0, 'wght' 1000, 'GRAD' 100, 'opsz' 48;
+}
+
+#Home,
+.PizzaNameQuantitePrice,
+.QuantitePrice,
+.Quantite,
+#ReturnButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.App {
+    width: 100vw;
+    height: 100vh;
+    /* background-image: url("https://i.imgur.com/KtpZfv7.png"); */
+    /* 25% */
+    /* background-image: url("https://i.imgur.com/pnk3967.png"); */
+    /* 50% */
+    background-image: url("https://i.imgur.com/pcajSQS.png");
+    /* 75% */
+    /* background-image: url("https://i.imgur.com/BhshlOA.png"); */
+    /* 100% */
+    background-position: center;
+    background-repeat: repeat;
+    background-size: contain;
+    padding: 20px;
+}
+
+#LoadingSection,
+#Menu div,
+.TopPizzaImg,
+#Ingrediants div:nth-of-type(2) div:first-child div,
+#Ingrediants div:nth-of-type(2) div:last-child div,
+#Ingrediants div:nth-of-type(2)>div:nth-child(2),
+#Footer>div:first-child,
+#Signature,
+#Bar,
+#MenuTitle,
+.PizzaCard>div:last-child,
+.AddToCartButton,
+.PizzaIngrediants p,
+.PizzaInCartImg,
+#Form form div:first-child,
+#Form form div:nth-child(2),
+#ThankYou,
+#ThankYou>div div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#TopPizzas,
+#Ingrediants,
+#Delivering,
+#FooterInfo div {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+#LoadingSection,
+#ThankYou {
+    width: 100vw;
+    height: 100vh;
+}
+
+#LoadingSection {
+    background-color: black;
+}
+
+#LoadingSection>div {
+    width: 350px;
+    height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://i.imgur.com/c4XlPKQ.gif");
+}
+
+#Home {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    column-gap: 30px;
+}
+
+#NavBar {
+    padding: 5px;
+    width: 150px;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 120px 1fr 120px;
+    row-gap: 20px;
+}
+
+#Logo {
+    background-image: url("https://i.imgur.com/IrzP4uy.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#Menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#Menu::before,
+#Menu::after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 5px;
+    background-color: var(--Primary-Color);
+    border-radius: 10px;
+}
+
+#Menu::before {
+    top: calc(-20px/2 - 5px/2);
+}
+
+#Menu::after {
+    bottom: calc(-20px/2 - 5px/2);
+}
+
+.PizzaIcon {
+    /* background-image: url("../public/images/icon.ico"); */
+    background-position: center;
+    background-size: cover;
+    width: 16px;
+    height: 16px;
+}
+
+.NavbarPanierLink {
+    position: relative;
+}
+
+.NavbarPanierLink div {
+    position: absolute;
+    background-color: var(--Primary-Color);
+    top: -8px;
+    right: -15px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    font-weight: bold;
+    /* font-size: 12px; */
+}
+
+#WorkTime {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.GlassEffect {
+    background-color: rgba(226, 226, 226, 0.521);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+}
+
+.active {
+    position: relative;
+    color: var(--Primary-Color);
+}
+
+.active::before {
+    position: absolute;
+    background-image: url("../public/images/icon.ico");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* background-color: var(--Primary-Color);
+    width: 15px;
+    height: 15px; */
+    width: 24px;
+    height: 24px;
+    content: "";
+    border-radius: 50%;
+    left: -22px;
+    top: calc(50% - 24px/2);
+}
+
+.ContentSection {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+
+#Slider,
+#TopPizzas,
+#Ingrediants,
+.PizzaInCart {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    margin-bottom: 5px;
+}
+
+#Slider>div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Slider>div span:first-child {
+    position: absolute;
+    top: calc(50% - 30px/2);
+    left: -25px;
+    color: var(--Primary-Color);
+}
+
+#Slider>div span:last-child {
+    position: absolute;
+    top: calc(50% - 30px/2);
+    right: -32px;
+    color: black;
+}
+
+#TopPizzas {
+    row-gap: 15px;
+}
+
+#TopPizzas>h1 {
+    color: var(--Primary-Color);
+    text-align: center;
+}
+
+#TopPizzasSection {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 40px;
+}
+
+.TopPizzaDiv {
+    height: 100%;
+    padding: 10px;
+    color: black;
+    border: 3px solid var(--Primary-Color);
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+}
+
+.TopPizzaInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.TopPizzaInfo>p {
+    font-size: 18px;
+    text-align: center;
+}
+
+.TopPizzaImg img {
+    width: 100%;
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    transform: translateY(-5px);
+}
+
+.TopPizzaDiv:hover .TopPizzaImg img {
+    transform: translateY(25px) rotate(100deg);
+}
+
+.TopPizzaDiv:hover {
+    color: white;
+    border: 3px solid white;
+    background-color: var(--Primary-Color);
+}
+
+#Ingrediants {
+    background-color: var(--Secondary-Color);
+    backdrop-filter: blur(1px);
+    border-radius: 20px;
+    text-align: center;
+}
+
+#Ingrediants h2 {
+    color: black;
+}
+
+#Ingrediants>div p {
+    font-size: 20px;
+}
+
+#Ingrediants>div {
+    color: white;
+}
+
+#Ingrediants div:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#Ingrediants div:nth-of-type(2) div:first-child,
+#Ingrediants div:nth-of-type(2) div:last-child {
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 5px;
+}
+
+#Ingrediants div:nth-of-type(2) div:first-child p,
+#Ingrediants div:nth-of-type(2) div:last-child p {
+    font-size: 22px;
+}
+
+#Ingrediants div:nth-of-type(2) div:first-child div,
+#Ingrediants div:nth-of-type(2) div:last-child div {
+    flex-direction: column;
+}
+
+#Ingrediants div:nth-of-type(2)>div:nth-child(2) {
+    width: 100%;
+}
+
+[alt="arrow"] {
+    position: absolute;
+}
+
+#Arrow_1 {
+    top: 125px;
+    left: 105px;
+}
+
+#Arrow_2 {
+    top: 25px;
+    right: -175px;
+}
+
+#Arrow_3 {
+    top: 100px;
+    left: -60px;
+}
+
+#Arrow_4 {
+    top: 25px;
+    right: 180px;
+}
+
+#Delivering {
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 5px;
+}
+
+#Delivering h1 {
+    color: var(--Primary-Color);
+}
+
+#Delivering p {
+    font-size: 20px;
+}
+
+#Delivering div:nth-child(2) {
+    display: flex;
+    align-items: center;
+}
+
+[alt="deliveryMan2"] {
+    width: 400px;
+    transform: translateX(700px);
+}
+
+[alt="deliveryMan1"] {
+    width: 400px;
+    transform: translateX(0px);
+    transition: all;
+    transition-duration: 700ms;
+    transition-timing-function: ease-in-out;
+}
+
+#Delivering:hover [alt="deliveryMan1"] {
+    transform: translateX(600px);
+}
+
+#Footer {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    display: grid;
+    padding: 20px;
+    padding-bottom: 10PX;
+    grid-template-rows: 100px 1fr auto 40px;
+}
+
+#Footer div:first-child img {
+    width: 100px;
+}
+
+#FooterInfo {
+    padding: 0px 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+}
+
+#FooterInfo div {
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#FooterInfo div h2 {
+    color: white;
+}
+
+#FooterInfo div p {
+    font-size: 20px;
+}
+
+[alt="deliveryManInFooter"] {
+    width: 100px;
+}
+
+#SocialMedia {
+    position: absolute;
+    width: 65px;
+    height: 100%;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    row-gap: 5px;
+}
+
+#SocialMedia div {
+    width: 50px;
+    height: 40px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    border-radius: 30px 0px 0px 30px;
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+}
+
+#SocialMedia div i {
+    color: white;
+    transform: translateX(20px);
+    transition-property: all;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
+}
+
+#SocialMedia div:hover {
+    width: 70px;
+    background-color: white;
+}
+
+#SocialMedia div:hover i {
+    color: var(--Primary-Color);
+    transform: translateX(10px);
+}
+
+#Bar {
+    margin: 5px 0px;
+    position: relative;
+}
+
+#Bar::before {
+    position: absolute;
+    content: "";
+    width: 1000px;
+    height: 3px;
+    background-color: var(--Primary-Color);
+    top: 0px;
+    left: calc(50% - 1000px/2);
+}
+
+#Signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: 20px;
+}
+
+#MenuTitle {
+    height: 100px;
+    margin-bottom: 5px;
+}
+
+#MenuTitle span {
+    width: 50px;
+    height: 50px;
+    background-image: url("https://i.imgur.com/a4lC9b4.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#MenuTitle h1 {
+    color: var(--Primary-Color);
+    font-size: 60px;
+}
+
+.PizzaCategory {
+    margin-bottom: 5px;
+    height: fit-content;
+    padding: 30px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.PizzaCategory h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.PizzaCategory>div {
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.PizzaCard {
+    height: 550px;
+    padding: 10px;
+    display: grid;
+    row-gap: 15px;
+    border-radius: 20px;
+    border: 2px solid black;
+    grid-template-rows: 300px auto 1fr auto;
+}
+
+.PizzaImg {
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.PizzaImg img {
+    width: 300px;
+    border-radius: 50%;
+    transition: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+}
+
+.PizzaPrice {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 80px;
+    height: 80px;
+    background-image: url("https://i.imgur.com/2V4qm09.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.PizzaIngrediants {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
+
+.PizzaIngrediants div {
+    width: 50px;
+}
+
+.PizzaIngrediants img {
+    width: 20px;
+}
+
+.PizzaIngrediants div:last-child {
+    display: flex;
+    align-items: flex-end;
+}
+
+.PizzaIngrediants div:last-child img {
+    transform: rotate(180deg);
+}
+
+.AddToCartButton {
+    width: 200px;
+}
+
+.AddToCartButton,
+#ReturnButton {
+    padding: 15px;
+    border: 3px solid white;
+    border-radius: 20px;
+}
+
+.AddToCartButton p,
+#ReturnButton p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.AddToCartButton span,
+#ReturnButton span {
+    font-size: 20px;
+    transform: translateX(0px);
+    transition: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+}
+
+.AddToCartButton:hover>span {
+    transform: translateX(10px);
+}
+
+.PizzaCard:hover .PizzaImg img {
+    transform: scale(105%);
+}
+
+.PizzaInCart {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 300px 60px 1fr;
+}
+
+.PizzaInCart lord-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.PizzaInCartImg img {
+    width: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+}
+
+.PizzaNameQuantitePrice {
+    width: 100%;
+}
+
+.QuantitePrice {
+    width: 220px;
+    height: 100%;
+}
+
+.Quantite {
+    color: var(--Primary-Color);
+    width: 120px;
+    height: 85%;
+    font-size: 25px;
+    padding: 0px 10px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.Quantite p {
+    border: 2px solid var(--Primary-Color);
+    padding: 3px 5px;
+    border-radius: 10px;
+}
+
+.Sauces,
+#Form {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    text-align: center;
+}
+
+.Sauces>div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.Sauce,
+.SauceSelected {
+    position: relative;
+    width: 130px;
+    height: 170px;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.Sauce {
+    border: 2px solid black;
+}
+
+
+/* .Sauce {
+    width: 110px;
+} */
+
+.SauceSelected {
+    border: 2px solid var(--Primary-Color);
+}
+
+.Sauce .CheckIcon {
+    display: none;
+}
+
+.SauceSelected .CheckIcon {
+    color: var(--Primary-Color);
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 25px;
+}
+
+.Sauce .SauceImage img,
+.SauceSelected .SauceImage img {
+    position: absolute;
+    width: 100px;
+    top: 5px;
+}
+
+.Sauce .SauceName,
+.SauceSelected .SauceName {
+    width: 100px;
+    height: 75px;
+    padding: 25px 0px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+}
+
+#Form {
+    padding: 20px;
+    height: 150px;
+    margin-bottom: 5px;
+}
+
+#Form form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) auto;
+    align-items: center;
+}
+
+#Form form>div:first-child,
+#Form form>div:nth-child(2) {
+    position: relative;
+}
+
+#Form input {
+    color: black;
+    width: 70%;
+    height: 55px;
+    padding-left: 40px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid black;
+    border-radius: 15px;
+    outline: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#Form input::placeholder {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#Form i {
+    position: absolute;
+    font-size: 25px;
+    left: 80px;
+}
+
+#ThankYou h2,
+#ThankYou h4 {
+    color: white;
+}
+
+#ThankYou>div {
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr auto;
+    justify-content: center;
+}
+
+#ReturnButton {
+    width: 150px;
+}
