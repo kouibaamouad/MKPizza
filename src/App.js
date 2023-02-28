@@ -6,7 +6,6 @@ import Menu from './Pages/Menu';
 import Panier from './Pages/Panier';
 import Thanks from './Pages/Thanks';
 import Loading from './Components/Loading';
-// import Home from './Pages/Home';
 import { fetchData } from './ReduxTK/PizzaSlice'
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from 'react';
