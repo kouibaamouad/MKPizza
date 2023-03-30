@@ -7,7 +7,7 @@ const initialState = {
 }
 
 export const fetchData = createAsyncThunk("Sauce/fetchData", () => {
-    return axios.get("https://mkpizzaapi.onrender.com/Sauces").then(r => r.data)
+    return axios.get("https://my-json-server.typicode.com/MouadKouibaa1/MKPizzaAPI/Sauces").then(r => r.data)
 })
 
 const SauceSlice = createSlice({
